@@ -280,7 +280,7 @@ function getWin32Url(version: string, options: Options): string | null {
   }
 
   const prefix = "LLVM-";
-  const suffix = compareVersions(version, "3.7.0") >= 0 ? "-win64.exe" : "-win32.exe";
+  const suffix = "-win32.exe";
   if (compareVersions(version, "9.0.1") >= 0) {
     return getGitHubUrl(version, prefix, suffix);
   } else {
