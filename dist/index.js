@@ -294,7 +294,7 @@ function getOptions() {
 /** Gets an LLVM download URL for the Windows platform. */ function getWin32Url(version, options) {
     if (!options.forceVersion && WIN32_MISSING.has(version)) return null;
     const prefix = "LLVM-";
-    const suffix = compareVersions(version, "3.7.0") >= 0 ? "-win64.exe" : "-win32.exe";
+    const suffix = "-win32.exe";
     if (compareVersions(version, "9.0.1") >= 0) return getGitHubUrl(version, prefix, suffix);
     else return getReleaseUrl(version, prefix, suffix);
 }
